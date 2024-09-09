@@ -8,10 +8,22 @@ import { Details } from "../pages/Details"
 export function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/details" element={<Details />} />
-      <Route path="/new" element={<New />} />
-      <Route path="/profile" element={<Profile />} />
+      <Route
+        path="https://luigiebo.github.io/Rocket-Films/"
+        element={<Home />}
+      />
+      <Route
+        path="https://luigiebo.github.io/Rocket-Films/details"
+        element={<Details />}
+      />
+      <Route
+        path="https://luigiebo.github.io/Rocket-Films/new"
+        element={<New />}
+      />
+      <Route
+        path="https://luigiebo.github.io/Rocket-Films/profile"
+        element={<Profile />}
+      />
     </Routes>
   )
 }
