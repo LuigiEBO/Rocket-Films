@@ -23,7 +23,7 @@ export const Form = styled.form`
     color: ${({ theme }) => theme.COLORS.GRAY_TEXT};
   }
   > a {
-    margin-top: 124px;
+    margin-top: 64px;
     color: ${({ theme }) => theme.COLORS.PINK};
     text-align: center;
   }
