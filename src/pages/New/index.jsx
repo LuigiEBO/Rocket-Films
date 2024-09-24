@@ -12,7 +12,7 @@ export function New() {
     <Container>
       <Header />
       <Content>
-        <Link to="/home">
+        <Link to="/">
           <FiArrowLeft /> Voltar
         </Link>
         <h1>Novo Filme</h1>

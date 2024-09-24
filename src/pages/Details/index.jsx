@@ -9,7 +9,7 @@ export function Details () {
     <Container>
       <Header />
       <Content>
-        <Link to="/home">
+        <Link to="/">
           <FiArrowLeft /> Voltar
         </Link>
         <h1>
