@@ -26,8 +26,9 @@ export const Profile = styled.div`
     display: flex;
     flex-direction: column;
 
-    > span {
+    > a {
       width: 110px;
+      color: ${({ theme }) => theme.COLORS.GRAY_TEXT};
     }
 
     > strong {

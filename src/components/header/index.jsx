@@ -5,17 +5,18 @@ import {FiSearch} from "react-icons/fi"
 export function Header() {
   return (
     <Container>
-        <h1>RocketMovies</h1>
+      <h1>RocketMovies</h1>
       <Input placeholder="Pesquisar Pelo Título" icon={FiSearch} />
-      <Link to="/profile">
-        <Profile>
-          <div>
+
+      <Profile>
+        <div>
+          <Link to="/profile">
             <span>Luigi Oliveira</span>
-            <strong>sair</strong>
-          </div>
-          <img src="https://github.com/luigiebo.png" alt="" />
-        </Profile>
-      </Link>
+          </Link>
+          <strong>sair</strong>
+        </div>
+        <img src="https://github.com/luigiebo.png" alt="" />
+      </Profile>
     </Container>
   )
 }
