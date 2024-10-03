@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Container, Content, Inputs, Marcadores, Buttons} from "./styles"
 import { Header } from "../../components/header"
 import { Input } from "../../components/input"
@@ -8,6 +9,16 @@ import { NewTag } from "../../components/newtag"
 import { Link } from "react-router-dom"
 import { FiArrowLeft } from "react-icons/fi"
 export function New() {
+  const [tags, setTags] = useState([]);
+  const [newTag, setNewTag] = useState("");
+
+  function handleAddTag () {
+    setTags(prevState => [...prevState, newTag])
+    setNewTag("")
+  }
+  function handleRemoveTag (tagDeleted) {
+    setTags(prevState => prevState.filter(tag => tag !== tagDeleted))
+  }
   return (
     <Container>
       <Header />
@@ -24,8 +35,20 @@ export function New() {
 
         <h2>Marcadores</h2>
         <Marcadores>
-          <NewTag value="react" />
-          <NewTag isNew placeholder="Nova Tag" />
+          {tags.map((tag, index) => (
+            <NewTag
+              key={String(index)}
+              value={tag}
+              onclick={() => handleRemoveTag(tag)}
+            />
+          ))}
+          <NewTag
+            isNew
+            placeholder="Nova Tag"
+            onChange={(e) => setNewTag(e.target.value)}
+            value={newTag}
+            onclick={handleAddTag}
+          />
         </Marcadores>
         <Buttons>
           <ButtonBlack title="Excluir Nota" />
