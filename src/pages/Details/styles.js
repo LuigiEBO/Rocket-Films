@@ -37,6 +37,7 @@ export const Content = styled.div`
   }
   > p {
     margin-top: 20px;
+    margin-bottom: 60px;
     text-align: justify;
   }
 `
