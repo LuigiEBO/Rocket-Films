@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { api } from "../../services/api";
+import { useNavigate } from "react-router-dom";
 import { Container, Interact, Content } from "./styles";
 import {Header} from "../../components/header"
 import { Button } from "../../components/button"
@@ -12,6 +13,11 @@ export function Home() {
   const [tags, setTags] = useState([])
   const [search, setSearch] = useState("")
   const [notes, setNotes] = useState([])
+  const navigate = useNavigate()
+
+  function handleDetails(id) {
+    navigate(`/details/${id}`)
+  }
   useEffect(() => {
     async function fetchTags() {
       const response = await api.get("/tags")
@@ -41,12 +47,13 @@ export function Home() {
         </Link>
       </Interact>
       <Content>
-        {notes.map((note) => (
-          <Film
-          key={String(note.id)}
-          data={note}
-          />
-        ))}
+          {notes.map((note) => (
+            <Film
+              key={String(note.id)}
+              data={note}
+              onClick={() => handleDetails(note.id)}
+            />
+          ))}
       </Content>
     </Container>
   )

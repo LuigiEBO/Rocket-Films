@@ -18,5 +18,4 @@ export const Interact = styled.div`
   }
 `
 export const Content = styled.div`
-  overflow-y: scroll;
 `

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
+ 
 `
 export const Content = styled.div`
   padding: 200px 123px 0;
@@ -15,8 +15,13 @@ export const Content = styled.div`
   }
   > h1 {
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     svg {
-      font-size: 20px;
+      font-size: 24px;
+      color: ${({ theme }) => theme.COLORS.PINK};
+      margin-left: 30px;
     }
   }
   > span {
@@ -30,9 +35,6 @@ export const Content = styled.div`
       width: 20px;
       height: 20px;
       border-radius: 50%;
-    }
-    svg {
-      color: ${({ theme }) => theme.COLORS.PINK};
     }
   }
   > p {

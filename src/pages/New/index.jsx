@@ -6,7 +6,6 @@ import { Header } from "../../components/header"
 import { Input } from "../../components/input"
 import { TextArea } from "../../components/textarea"
 import { Button } from "../../components/button"
-import { ButtonBlack } from "../../components/buttonblack"
 import { NewTag } from "../../components/newtag"
 import { Link } from "react-router-dom"
 import { FiArrowLeft } from "react-icons/fi"
@@ -89,7 +88,6 @@ export function New() {
           />
         </Marcadores>
         <Buttons>
-          <ButtonBlack title="Excluir Nota" />
           <Button title="Salvar Nota" onClick={handleNewFilm} />
         </Buttons>
       </Content>
