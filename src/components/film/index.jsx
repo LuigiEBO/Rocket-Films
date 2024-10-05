@@ -2,23 +2,19 @@ import { Container, Text, Tags} from "./styles";
 import {FiStar} from "react-icons/fi"
 import { Tag } from "../tags";
 import { Link } from "react-router-dom";
-export function Film() {
+export function Film({ data, ...rest }) {
+  
   return (
-    <Container>
+    <Container {...rest}>
       <Link to="/details">
         <Text to="/details">
-          <h2>Interestellar</h2>
-          <FiStar /> <FiStar /> <FiStar /> <FiStar /> <FiStar />
-          <p>
-            Pragas nas colheitas fizeram a civilização humana regredir para uma
-            sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto
-            da NASA, tem uma fazenda com sua família. Murphy, a filha de dez
-            anos de Cooper, acredita que seu quarto está assombrado por um
-            fantasma que tenta se...
-          </p>
+          <h2>{data.name}</h2>
+          <p>{data.rating} <FiStar/></p>
+          <p>{data.description}</p>
           <Tags>
-            <Tag title="Drama" /> <Tag title="Ficção Científica" />
-            <Tag title="Diversão" />
+            {data.tags.map((tag) => (
+              <Tag key={tag.id} title={tag.name} />
+            ))}
           </Tags>
         </Text>
       </Link>

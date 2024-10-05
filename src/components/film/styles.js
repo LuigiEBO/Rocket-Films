@@ -4,6 +4,7 @@ export const Container = styled.div`
   width: 100%;
   padding: 0 123px;
   margin-bottom: 25px;
+  
 `
 
 export const Text = styled.div`
@@ -14,14 +15,14 @@ export const Text = styled.div`
     margin-bottom: 10px;
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
-  > svg {
-    margin-bottom: 10px;
-    color: ${({ theme }) => theme.COLORS.PINK};
-  }
+
   > p {
     margin-bottom: 10px;
     color: ${({ theme }) => theme.COLORS.GRAY_TEXT};
     opacity: 1;
+    > svg {
+      color: ${({ theme }) => theme.COLORS.PINK};
+    }
   }
 `
 export const Tags = styled.div`

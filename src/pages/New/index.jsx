@@ -6,7 +6,7 @@ import { Header } from "../../components/header"
 import { Input } from "../../components/input"
 import { TextArea } from "../../components/textarea"
 import { Button } from "../../components/button"
-
+import { ButtonBlack } from "../../components/buttonblack"
 import { NewTag } from "../../components/newtag"
 import { Link } from "react-router-dom"
 import { FiArrowLeft } from "react-icons/fi"
@@ -41,7 +41,7 @@ export function New() {
       name,
       description,
       rating,
-      tags,
+      tags
     })
     alert("Nota criada com sucesso");
     navigate("/")
@@ -89,7 +89,8 @@ export function New() {
           />
         </Marcadores>
         <Buttons>
-          <Button title="Salvar Nota" onClick={handleNewFilm}/>
+          <ButtonBlack title="Excluir Nota" />
+          <Button title="Salvar Nota" onClick={handleNewFilm} />
         </Buttons>
       </Content>
     </Container>

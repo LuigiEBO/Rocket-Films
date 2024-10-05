@@ -3,7 +3,6 @@ import {Header} from "../../components/header"
 import { Link } from "react-router-dom";
 import { Tag } from "../../components/tags";
 import {FiArrowLeft, FiStar, FiClock} from "react-icons/fi";
-import { ButtonBlack } from "../../components/buttonblack"
 
 export function Details () {
   return (
@@ -57,8 +56,6 @@ export function Details () {
           partida. Ao voltarem para a Endurance, Cooper e Amelia descobrem que
           23 anos se passaram.
         </p>
-
-        <ButtonBlack title="Excluir Nota" />
       </Content>
     </Container>
   )
