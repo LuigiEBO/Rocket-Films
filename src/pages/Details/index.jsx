@@ -18,7 +18,9 @@ export function Details () {
     : placeholderImg
   const [data, setData] = useState(null)
   const params = useParams()
-
+  function handleBack() {
+    navigate(-1)
+  }
   async function handleRemoveNote() {
     const confirm = window.confirm("Deseja realmente remover a nota?")
 
@@ -52,7 +54,8 @@ export function Details () {
           </h1>
 
           <span>
-            <img src={avatarUrl} alt={user.name} /> Por {user.name} <FiClock /> {data.created_at}
+            <img src={avatarUrl} alt={user.name} /> Por {user.name} <FiClock />{" "}
+            {data.created_at}
           </span>
           {data.tags && (
             <Tags>
@@ -62,10 +65,7 @@ export function Details () {
             </Tags>
           )}
           <p>{data.description}</p>
-          <ButtonBlack 
-          title="Excluir Nota" 
-          onClick={handleRemoveNote}
-          />
+          <ButtonBlack title="Excluir Nota" onClick={handleRemoveNote} />
         </Content>
       )}
     </Container>
